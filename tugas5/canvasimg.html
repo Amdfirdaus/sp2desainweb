@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contoh Canvas HTML</title>
+    <style>
+      canvas {
+        border: 1px solid #000;
+        background-color: #f0f0f0;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      membuat gambar di dalam canvas kotak dan lingkaran serta menyisipkan
+      gambar
+    </h2>
+
+    <canvas id="kanvasSaya" width="500" height="300"></canvas>
+
+    <script>
+      // Ambil elemen canvas
+      const canvas = document.getElementById("kanvasSaya");
+      const ctx = canvas.getContext("2d");
+
+      // Gambar persegi panjang merah
+      ctx.fillStyle = "red";
+      ctx.fillRect(50, 50, 150, 100);
+
+      // Gambar lingkaran biru
+      ctx.beginPath();
+      ctx.arc(300, 150, 50, 0, 2 * Math.PI);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+
+      // Tambahkan teks
+      ctx.font = "20px Arial";
+      ctx.fillStyle = "black";
+      ctx.fillText("Hello Canvas!", 180, 280);
+    </script>
+    <img src="/img/fotoprofile.jpeg" alt="" />
+  </body>
+</html>
